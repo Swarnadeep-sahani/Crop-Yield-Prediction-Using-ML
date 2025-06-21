@@ -1,0 +1,266 @@
+/* Content Section */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    /* Align items at the top */
+}
+
+.left-section {
+    flex: 1;
+    max-width: 200px;
+    /* Adjust width as needed */
+}
+
+.left-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-section li {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.right-section {
+    flex: 3;
+    text-align: left;
+}
+
+.right-section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.right-section .description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.learn-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    border: 2px solid green;
+    background: transparent;
+    color: green;
+    font-size: 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.learn-more-btn:hover {
+    background: green;
+    color: white;
+}
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+        /* Stack items vertically */
+    }
+
+    .left-section {
+        max-width: 100%;
+        /* Take full width */
+        margin-bottom: 5px;
+        /* Add spacing below */
+    }
+
+    .right-section {
+        max-width: 100%;
+        /* Take full width */
+    }
+}
+
+/* Info Cards */
+.info-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevent wrapping to the next line */
+    gap: 20px;
+    /* Adds spacing between items */
+    justify-content: space-between;
+    /* Distributes items evenly */
+    align-items: center;
+    /* Aligns content vertically */
+    padding-top: 10px;
+}
+
+.img-card img {
+    width: 300px;
+    /* Set a consistent width */
+    height: 215px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card {
+    flex: 1;
+    /* Makes cards take equal width */
+    max-width: 300px;
+    /* Prevents cards from becoming too wide */
+    background-color: #b0a9a9;
+    width: 250px;
+    /* Set a consistent width */
+    height: 215px;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.card h3 {
+    font-weight: 700;
+    /* Makes text bold */
+    font-size: 25px;
+    /* Adjust this for desired size */
+    line-height: 1.4;
+    /* Improves readability */
+    color: #333;
+    /* Darker text for contrast */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    /* Places items on opposite sides */
+    align-items: center;
+    /* Aligns them vertically */
+    width: 100%;
+    /* Ensures full width inside the card */
+}
+
+.icon-button {
+    cursor: pointer;
+    font-size: 25px;
+    /* Adjust icon size */
+}
+
+.card h4 {
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.card p {
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.card.highlight {
+    background-color: #8ec521;
+    padding: 20px;
+    width: 250px;
+    /* Set a consistent width */
+    height: 215px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Tablet View:*/
+@media (min-width: 451px) and (max-width: 1200px) {
+    .info-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Two columns */
+        grid-template-rows: auto auto;
+        /* Two rows */
+        gap: 20px;
+        /* Spacing between items */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-card,
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .card.highlight {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Larger Tablet & Small Laptops (Width: 768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .info-cards {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        /* Image auto-size, text fills remaining space */
+        grid-template-rows: auto auto;
+        /* Two rows */
+        gap: 10px 20px;
+        /* Reduce the large gap */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-card img {
+        width: 280px;
+        /* Set a reasonable fixed width */
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card {
+        max-width: 100%;
+        /* Prevent text blocks from stretching too much */
+        width: 100%;
+    }
+}
+
+
+
+/* Mobile View */
+@media (max-width: 450px) {
+    .info-cards {
+        flex-direction: column;
+        /* Stack cards vertically */
+        gap: 15px;
+        /* Add spacing between stacked cards */
+        align-items: center;
+        /* Center-align cards */
+    }
+
+    .card {
+        max-width: 100%;
+        /* Allow cards to take full width */
+        width: 100%;
+        /* Ensure cards stretch to container width */
+    }
+
+    .img-card img {
+        width: 100%;
+        /* Ensure images stretch to card width */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .card.highlight {
+        max-width: 100%;
+        /* Allow cards to take full width */
+        width: 100%;
+        /* Ensure cards stretch to container width */
+    }
+}

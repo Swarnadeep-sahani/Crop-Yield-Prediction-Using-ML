@@ -1,0 +1,38 @@
+.body-section {
+    margin-top: 20px;
+    padding: 40px;
+    background: #f9f9f9;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+    background: #f0f0f0;
+    /* Optional hover effect */
+}
+
+.tab.active {
+    background: #8ec521;
+    color: #000;
+}
+
+.tab.active:hover {
+    background: #6c9716;
+    color: white;
+}

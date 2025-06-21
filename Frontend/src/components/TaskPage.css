@@ -1,0 +1,159 @@
+.task-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/field.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+}
+
+.task-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.inputBox {
+    margin-top: 20px;
+    margin-left: 240px;
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #90cdf4;
+}
+
+option {
+    color: black;
+}
+
+.predicted-value-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-right: 8px;
+    overflow: hidden;
+}
+
+.input-with-unit input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.unit-label {
+    padding: 0 8px;
+    font-size: 0.9em;
+    color: white;
+    white-space: nowrap;
+}
+
+.prediction-box {
+    grid-column: span 2;
+    margin-top: 20px;
+}
+
+.predicted-message {
+    margin-top: 7px;
+    border-radius: 10px;
+}
+
+.advice-message-inside {
+    display: flex;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.input-group .submit-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    background: #2ecc71;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.input-group .submit-btn:hover {
+    background: white;
+    color: #27ae60;
+    transition: background 0.3s ease;
+}

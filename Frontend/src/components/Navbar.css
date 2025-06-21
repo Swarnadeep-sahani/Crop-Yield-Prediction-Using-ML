@@ -1,0 +1,202 @@
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 15px 20px;
+}
+
+.navbar.scrolling {
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s;
+}
+
+/* When scrolling, change color properly */
+.navbar.scrolling .nav-links a {
+    color: black;
+}
+
+.nav-links a:hover {
+    color: #4CAF50 !important;
+    /* Ensure hover color works */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: white;
+}
+
+.navbar.scrolling .logo-text {
+    color: green;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        /* gap: 20px; */
+        gap: 75px;
+    }
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s;
+}
+
+.navbar.scrolling .nav-links a {
+    color: black;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+
+/* Mobile Menu Button (Hamburger Icon) */
+.menu-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (min-width: 768px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+/* Ensure close icon is green */
+.menu-button .close-icon {
+    color: #4CAF50 !important;
+}
+
+/* Overlay for Mobile Menu */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.show {
+    display: block;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding-top: 60px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Ensuring Proper List Item Alignment */
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-nav-links li {
+    margin: 15px 0;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.mobile-nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Remove the extra close button */
+.close-button {
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .navbar-logo img {
+        width: 100px;
+        /* Reduce logo size */
+        height: auto;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+        /* Reduce company name size */
+    }
+}
